@@ -1,6 +1,6 @@
 [[transport.rabbitmq.sender]]
 name = "AMQPConnectionFactory"
 parameter.hostname = "armadillo.rmq.cloudamqp.com"
-parameter.password = "$secret{JMS_PASS}"
+parameter.password = "$env{JMS_PASS}"
 parameter.port = 5672
 parameter.username = "iazlwjor"
