@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/orderpayment" name="OrderPaymentServiceAPI" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="GET">
+    <resource methods="POST">
         <inSequence>
             <log description="Log request payload" level="full"/>
             <property description="Initiate asynchronous mediation flow" name="OUT_ONLY" scope="default" type="STRING" value="true"/>
