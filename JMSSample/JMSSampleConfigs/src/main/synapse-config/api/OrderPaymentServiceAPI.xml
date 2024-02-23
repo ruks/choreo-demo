@@ -7,7 +7,7 @@
             <property description="Generate 202 response from mediation flow" name="FORCE_SC_ACCEPTED" scope="axis2" type="STRING" value="true"/>
             <send>
                 <endpoint>
-                    <address uri="rabbitmq://AMQPConnectionFactory?rabbitmq.server.virtual.host=iazlwjor&amp;amp;rabbitmq.server.host.name=armadillo.rmq.cloudamqp.com&amp;amp;rabbitmq.server.port=5672&amp;amp;rabbitmq.server.user.name=iazlwjor&amp;amp;rabbitmq.queue.name=rpc_queue&amp;amp;rabbitmq.queue.route.key=route&amp;amp;rabbitmq.replyto.name=dummy">
+                    <address uri="$SYSTEM:JMS_URI">
                         <suspendOnFailure>
                             <initialDuration>-1</initialDuration>
                             <progressionFactor>-1</progressionFactor>
