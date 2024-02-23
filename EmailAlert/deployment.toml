@@ -4,6 +4,6 @@ parameter.auth = true
 parameter.enable_tls = true
 parameter.from = "choreoalert@gmail.com"
 parameter.hostname = "smtp.gmail.com"
-parameter.password = "$sys{EMAIL_PASS}"
+parameter.password = "$env{EMAIL_PASS}"
 parameter.port = "587"
 parameter.username = "choreoalert@gmail.com"
