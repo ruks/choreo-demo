@@ -4,6 +4,7 @@
         <inSequence>
             <log level="full"/>
             <property description="Initiate asynchronous mediation flow" name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+            <property expression="fn:concat('Detect File: ', get-property('transport','FILE_NAME'))" name="Subject" scope="transport" type="STRING"/>
             <send>
                 <endpoint>
                     <address uri="mailto:choreoalert@gmail.com">
