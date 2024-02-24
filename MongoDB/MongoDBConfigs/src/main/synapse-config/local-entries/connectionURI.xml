@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="connectionURI" xmlns="http://ws.apache.org/ns/synapse">
+    <mongodb.init>
+        <database>Cluster0</database>
+        <connectionURI>wso2:vault-lookup('MONGO_DB_URI')</connectionURI>
+        <name>connectionURI</name>
+        <connectionType>URI</connectionType>
+    </mongodb.init>
+</localEntry>
