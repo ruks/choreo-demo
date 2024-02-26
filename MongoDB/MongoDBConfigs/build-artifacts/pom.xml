@@ -17,5 +17,6 @@
     <module>api/MongoDBAPI</module>
     <module>metadata/MongoDBAPI_swagger</module>
     <module>metadata/MongoDBAPI_metadata</module>
+    <module>local-entries/MONGODB_CONNECTION</module>
   </modules>
 </project>

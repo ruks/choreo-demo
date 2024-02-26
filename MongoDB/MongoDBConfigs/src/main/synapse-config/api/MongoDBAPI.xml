@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/mongodbapi" name="MongoDBAPI" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="POST" uri-template="/insertmany">
+    <resource methods="POST" uri-template="/find">
         <inSequence>
-            <mongodb.insertMany configKey="connectionURI">
+            <mongodb.find configKey="MONGODB_CONNECTION">
                 <collection>{json-eval($.collection)}</collection>
-                <documents>{json-eval($.documents)}</documents>
-                <ordered>True</ordered>
-            </mongodb.insertMany>
+                <query>{json-eval($.query)}</query>
+            </mongodb.find>
             <respond/>
         </inSequence>
         <outSequence/>
         <faultSequence/>
     </resource>
-    <resource methods="POST" uri-template="/find">
+    <resource methods="POST" uri-template="/insertmany">
         <inSequence>
-            <mongodb.find configKey="connectionURI">
+            <mongodb.insertMany configKey="MONGODB_CONNECTION">
                 <collection>{json-eval($.collection)}</collection>
-                <query>{json-eval($.query)}</query>
-            </mongodb.find>
+                <documents>{json-eval($.documents)}</documents>
+                <ordered>True</ordered>
+            </mongodb.insertMany>
             <respond/>
         </inSequence>
         <outSequence/>
